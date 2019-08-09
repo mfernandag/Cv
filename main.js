@@ -9,6 +9,16 @@ fetch("https://raw.githubusercontent.com/mfernandag/fetch/master/cv.json")
         personName.innerText = ` ${name}`
         nameData.appendChild(personName)
         cvContainer.appendChild(nameData)
+        const cvTitle = res.cvTitle
+        let profesion = document.createElement("p")
+        profesion.classList.add("cvTitle")
+        profesion.innerText = cvTitle
+        cvContainer.appendChild(profesion)
+        const cvDescription = res.cvDescription
+        let description = document.createElement("p")
+        description.classList.add("cvDescription")
+        description.innerText = cvDescription
+        cvContainer.appendChild(description)
     })
 
 
